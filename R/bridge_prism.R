@@ -11,7 +11,7 @@ model_run <- function() {
 
   data = list(y=y, z=z)
   formula = y ~ 1+z
-  result = inla(formula, family = "gaussian", data = data)
+  result = inla(formula, family = "gaussian", data = data, verbose = TRUE)
 
   output <- summary(result)
 
